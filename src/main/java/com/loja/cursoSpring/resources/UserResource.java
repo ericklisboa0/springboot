@@ -12,8 +12,8 @@ import com.loja.cursoSpring.entities.User;
 public class UserResource {
 
 	@GetMapping
-	public ResponseEntity<User> findAll(){
-		User u = new User(1L, "Erick", "erickllm0@hotmail.com", "996993509", "1234567");
-		return ResponseEntity.ok().body(u);
+	public ResponseEntity<User> findAll(){ //ResponseEntity é um tipo específico do spring para retornar respostas de requisições web
+		User u = new User(1L, "Erick", "erickllm0@hotmail.com", "996993509", "1234567"); //O "L" é necessário por ser um long
+		return ResponseEntity.ok().body(u); //.ok serve para retornar a resposta com sucesso no http, .body serve para retornar o corpo da resposta
 	}
 }
